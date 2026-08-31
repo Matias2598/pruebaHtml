@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="funciones.js" defer></script>
     <title>Panaderia el Trigal</title>
 </head>
 <body>
     <header> 
         <h1>Panadia el Trigal</h1>
-        <p>los mejores trigos</p>
+        <p>Las mejores masas</p>
         <nav>
             <ul>
                 <li><a href="#menu">Menú</a></li>
@@ -22,38 +24,67 @@
             <h2>Menú</h2>
          <article>
             <h3>Pan amasado</h3>
-            <img src="pan amasado.jpg" alt="foto pan amasado" width="200" height="200">
+            <img src="pan amasado.jpg" alt="foto pan amasado">
             <p>Pan amasado recien preparado a $300 c/u</p>
          </article>
          <article>
             <h3>Croissant</h3>
-            <img src="croissants.jpg" alt="foto croissant" width="200" height="200">
+            <img src="croissants.jpg" alt="foto croissant">
             <p>Delicioso croissant a $1.000 c/u</p>
          </article>
          <article>
             <h3>Donas</h3>
-            <img src="donas.jpg" alt="foto donas" width="200" height="200">
+            <img src="donas.jpg" alt="foto donas">
             <p>Ricas donas a $1.500 c/u</p>
          </article>
          <article>
             <h3>Baguette</h3>
-            <img src="baguette.jpg" alt="foto baguette" width="200" height="200">
+            <img src="baguette.jpg" alt="foto baguette">
             <p>Crujiente baguette a $850 c/u</p>
          </article>
          <article>
             <h3>Torta de chocolate</h3>
-            <img src="tortachocolate.jpg" alt="foto torta de chocolate" width="200" height="200">
+            <img src="tortachocolate.jpg" alt="foto torta de chocolate">
             <p>Gran torta de puro chocolate a $20.000 c/u</p>
          </article>
          <article>
             <h3>Queque</h3>
-            <img src="queque.jpg" alt="foto queque" width="200" height="200">
+            <img src="queque.jpg" alt="foto queque">
             <p>Queque esponjoso a $1.200 cada trozo</p>
             <p>Queque completo a $5.000</p>
          </article>
         </section>
         <section id="contacto">
-            <h3>Haz tus consultas</h3>
+            <h2>Haz tus consultas</h2>
+            <form id="consulta" novalidate>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required>
+                <span class="error"></span>
+
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" required>
+                <span class="error"></span>
+
+                <label for="telefono">Telefono (opcional)</label>
+                <input type="number" id="telefono">
+
+                <label for="tipo-consulta">Tipo de la consulta</label>
+                <select id="tipo-consulta" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="general">Consulta general</option>
+                    <option value="especial">Pedido especial</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <span class="error"></span>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" maxlength="100" placeholder="Escriba su consulta aqui" required></textarea>
+                <span class="error"></span>
+
+                <button type="submit">Enviar</button>
+                <p id="mensaje-confirmacion"></p>
+            </form>
         </section>
     </main>
     <footer>
