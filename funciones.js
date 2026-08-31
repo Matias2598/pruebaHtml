@@ -28,4 +28,13 @@ formulario.addEventListener('submit', function(e){
         errorSpan.textContent = 'el correo NO tiene formato válido';
         formularioValido = false;
     }
+
+    const mensajeConfirmacion = document.querySelector('#mensaje-confirmacion')
+
+    if(formularioValido){
+        mensajeConfirmacion.textContent = 'Consulta enviada correctamente';
+    }else{
+        mensajeConfirmacion.textContent = '';
+    }
+
 });
