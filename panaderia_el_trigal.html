@@ -9,7 +9,7 @@
 <body>
     <header> 
         <h1>Panadia el Trigal</h1>
-        <p>los mejores trigos</p>
+        <p>Las mejores masas</p>
         <nav>
             <ul>
                 <li><a href="#menu">Menú</a></li>
@@ -55,6 +55,35 @@
         </section>
         <section id="contacto">
             <h2>Haz tus consultas</h2>
+            <form id="consulta">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required>
+                <span class="error"></span>
+
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" required>
+                <span class="error"></span>
+
+                <label for="telefono">Telefono (opcional)</label>
+                <input type="number" id="telefono">
+
+                <label for="tipo-consulta">Tipo de la consulta</label>
+                <select id="tipo-consulta" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="general">Consulta general</option>
+                    <option value="especial">Pedido especial</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <span class="error"></span>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" maxlength="100" placeholder="Escriba su consulta aqui" required></textarea>
+                <span class="error"></span>
+
+                <button type="submit">Enviar</button>
+                <p id="mensaje-confirmacion"></p>
+            </form>
         </section>
     </main>
     <footer>
